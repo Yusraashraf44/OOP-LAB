@@ -2,7 +2,6 @@ package MODULE3;
 
 import java.util.Scanner;
 
-import MODULE3.EmployeeT.Teacher;
 
 public class Person {
 	String name;
@@ -36,8 +35,12 @@ class Employee extends Person
 		Teacher(String name,String gender,String address,int age,String empid,String company_name,String qualification,float salary,String subject,String department,String teacherid)
 		{
 			super(name,gender,address,age,empid,company_name,qualification,salary);
+			
+			
+		
+			
 		}
-	}
+	
 	public void display()
 	{
 		System.out.println("Teacher id:"+empid);
@@ -52,7 +55,8 @@ class Employee extends Person
 		System.out.println("Teacher department:"+department);
 	}
 }
-public class TeacherArrObjects
+
+static class TeacherArrObjects
 {
 	public static void main(String[] args)
 	{
@@ -99,7 +103,7 @@ public class TeacherArrObjects
 		}
 	}
 }
-	
+}
 		
 		
 		
