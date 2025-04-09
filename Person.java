@@ -64,7 +64,7 @@ static class TeacherArrObjects
 		Scanner sc=new Scanner(System.in);
 				int n=sc.nextInt();
 		System.out.println("Enter teacher details one by one..");
-		Teacher teacher[]=new Teacher[n];
+		Teacher[] teachers=new Teacher[n];
 		Scanner sct=new Scanner(System.in);
 		int tid,age,empid;String name,company_name,qualification,gender;float salary;String address;String department;String subject;
 		for(int i=0;i<n;i++)
@@ -92,18 +92,21 @@ static class TeacherArrObjects
 			subject=sct.next();
 			System.out.println("Enter teacher salary(float):");
 			salary=sct.nextFloat();
-			Teacher t=new Teacher(name,gender,address,age,empid,company_name,qualification,salary,subject,department,tid);
-			teacher[i]=t;
+			teachers[i]=new Teacher(name,gender,address,age,empid,company_name,qualification,salary,subject,department,tid);
+			
 		}
 		System.out.println("Teachers are:\n");
-		for(Teacher x:teacher)
+		for(Teacher teacher:teachers)
 		{
-			x.display();
-			System.out.println("\n");
+			teacher.display();
 		}
+		sc.close();
+		sct.close();
 	}
 }
 }
+			
+
 		
 		
 		
